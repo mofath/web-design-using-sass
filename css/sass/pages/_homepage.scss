@@ -1,0 +1,14 @@
+.product {
+    background-color: #EEE;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    @include prefixer(box-shadow, 10px 10px 10px #CCC, webkit moz o); 
+    .overlay{
+        @include overlay;
+        background-color:rgba($redColor, 0.2);
+        color: #FFF;
+    }
+}
