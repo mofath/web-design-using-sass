@@ -1,3 +1,25 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.container {
+  width: 1200px;
+  margin: auto;
+  padding: 0 15px; }
+
+body {
+  background-color: #F6F6F6;
+  font-family: Tahoma;
+  font-size: 16px; }
+
+.header .logo {
+  width: 30%;
+  float: left; }
+.header .navbar {
+  width: 70%;
+  float: left; }
+
 .product {
   background-color: #EEE;
   padding: 10px;
@@ -5,9 +27,14 @@
   width: 300px;
   height: 150px;
   position: relative;
-  _webkit_box-shadow: 10px 10px 10px #CCC;
-  _moz_box-shadow: 10px 10px 10px #CCC;
-  _o_box-shadow: 10px 10px 10px #CCC;
+  animation: fadeInOut 2s infinite linear;
+  -moz-animation: fadeInOut 2s infinite linear;
+  -o-animation: fadeInOut 2s infinite linear;
+  -webkit-animation: fadeInOut 2s infinite linear;
+  animation: fadeInOut 2s infinite linear;
+  -webkit-box-shadow: 10px 10px 10px #CCC;
+  -moz-box-shadow: 10px 10px 10px #CCC;
+  -o-box-shadow: 10px 10px 10px #CCC;
   box-shadow: 10px 10px 10px #CCC; }
   .product .overlay {
     position: absolute;
@@ -17,5 +44,27 @@
     height: 100%;
     background-color: rgba(226, 73, 76, 0.2);
     color: #FFF; }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0.5; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.5; } }
+@-webkit-keyframes fadeInOut {
+  0% {
+    opacity: 0.5; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.5; } }
+@-moz-keyframes fadeInOut {
+  0% {
+    opacity: 0.5; }
+  50% {
+    opacity: 1; }
+  100% {
+    opacity: 0.5; } }
 
 /*# sourceMappingURL=homepage.css.map */

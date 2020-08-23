@@ -16,7 +16,19 @@
 // prefix mixin
 @mixin prefixer($property, $value, $prefixes:()) {
     @each $prefix in $prefixes {
-        #{ '_' + $prefix +'_' + $property}: $value;
+        #{ '-' + $prefix +'-' + $property}: $value;
     }
     #{$property} : $value;
+}
+
+@mixin keyFrame($animation-name){
+    @keyframes #{$animation-name} {
+        @content;
+    }
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
 }
